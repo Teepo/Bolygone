@@ -83,14 +83,16 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Bolygone = exports.Bolygone = function () {
-    function Bolygone() {
+    function Bolygone(x, y) {
         _classCallCheck(this, Bolygone);
 
         this.canvas = document.querySelector('canvas');
         this.ctx = this.canvas.getContext('2d');
 
-        this.x = document.getElementById('X').value;
-        this.y = document.getElementById('Y').value;
+        this.clear();
+
+        this.x = x;
+        this.y = y;
 
         this.ctx.translate(this.canvas.width / 2, this.canvas.height / 2);
         this.ctx.rotate(-Math.PI / 2);
@@ -104,6 +106,13 @@ var Bolygone = exports.Bolygone = function () {
     }
 
     _createClass(Bolygone, [{
+        key: 'clear',
+        value: function clear() {
+
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+        }
+    }, {
         key: 'drawCircle',
         value: function drawCircle() {
 
