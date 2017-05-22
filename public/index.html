@@ -1,0 +1,65 @@
+<html>
+
+  <head>
+
+    <title>Bolygones</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/bundle.js"></script>
+  </head>
+
+  <body>
+
+    <div class="console">
+
+      <div class="console--info">
+        <div class="console--movementID">0</div>
+        <div class="console--time">0</div>
+      </div>
+
+      <div class="u-table">
+
+        <div class="u-cell">
+
+          <div class="console--inputs">
+
+            <label for="X">X :</label>
+            <input type="number" name="X" id="X" value="10" />
+
+            <label for="Y">Y :</label>
+            <input type="number" name="Y" id="Y" value="2" />
+          </div>
+
+        </div>
+
+        <div class="u-cell">
+
+          <div class="console--controls">
+            <div class="console--play console--state"></div>
+            <div class="console--stop console--state"></div>
+            <div class="console--next console--state"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="u-table">
+      <div class="u-cell u-align-center">
+
+        <canvas width="600" height="600"></canvas>
+
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          new App.Bolygone;
+      });
+    </script>
+
+  </body>
+</html>
