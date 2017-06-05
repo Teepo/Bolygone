@@ -2,7 +2,7 @@
 
   <head>
 
-    <title>Bolygones</title>
+    <title>Bolygone</title>
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -26,11 +26,39 @@
 
           <div class="console--inputs">
 
-            <label for="X">X :</label>
-            <input type="number" name="X" id="X" value="100" />
+            <table>
 
-            <label for="Y">Y :</label>
-            <input type="number" name="Y" id="Y" value="2" />
+              <tr>
+
+                <td>
+                  <label for="X">X :</label>
+                  <input type="number" name="X" id="X" value="100.0" step="0.1" /> to
+                </td>
+
+                <td>
+                  <input type="number" name="to_X" id="to_X" value="200.0" step="0.1" />
+                </td>
+
+              </tr>
+
+              <tr>
+
+                <td>
+
+                  <label for="Y">Y :</label>
+                  <input type="number" name="Y" id="Y" value="2.0" step="0.01" /> to
+
+                </td>
+
+                <td>
+
+                  <input type="number" name="to_Y" id="to_Y" value="5.0" step="0.01" />
+
+                </td>
+
+              </tr>
+
+            </table>
           </div>
 
         </div>
