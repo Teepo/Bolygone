@@ -1,7 +1,7 @@
 module.exports = {
     entry : './src/Bolygone.js',
     output: {
-        path: __dirname + '/public/js/',
+        path: __dirname + '/js/',
         filename: 'bundle.js',
         library: 'App'
     },
