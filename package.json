@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "serve": "^5.2.1",
-    "webpack": "^2.6.1"
+    "webpack": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
