@@ -1,25 +1,36 @@
+/* eslint-env node */
+
 module.exports = {
-    entry : './src/Bolygone.js',
+
+    mode : 'production',
+
+    entry : {
+        app : __dirname + '/src/js/Bolygone.js'
+    },
+
     output: {
-        path: __dirname + '/public/js/',
-        filename: 'bundle.js',
-        library: 'App'
+        filename      : '[name].js',
+        chunkFilename : '[name].[hash].chunk.js',
+        publicPath    : __dirname + '/public/',
+        path          : __dirname + '/public/js/',
+        libraryTarget : 'window'
+    },
+
+    optimization: {
+        minimize: true
     },
 
     resolve: {
-        extensions: [".js"]
+        extensions: [".js"],
     },
 
     module: {
-        loaders: [
-            {
-                test : /\.js?/,
-                exclude: /node_modules/,
-                loader : 'babel-loader',
-                query: {
-                    presets: ['env']
-                }
+        rules: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader'
             }
-        ]
+        }]
     }
 };

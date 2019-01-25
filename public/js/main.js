@@ -33,7 +33,7 @@ class Main {
 
     draw() {
 
-        new App.Bolygone(this.DOM.x.value, this.DOM.y.value);
+        new Bolygone(this.DOM.x.value, this.DOM.y.value);
     }
 
     /**

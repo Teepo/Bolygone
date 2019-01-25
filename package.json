@@ -1,20 +1,22 @@
 {
   "scripts": {
-    "start": "npm run js_maker & npm run server",
-    "server": "./node_modules/serve/bin/serve.js ./public/",
-    "js_maker": "webpack --progress --colors --watch --debug",
+    "app": "yarn run build:js && node_modules/electron/cli.js ./src/js/electron.js",
+    "web": "yarn run build:js &&  ./node_modules/serve/bin/serve.js ./public/",
+    "build:js": "node_modules/webpack/bin/webpack.js --progress --colors --debug",
     "jsdoc": "./node_modules/jsdoc/jsdoc.js -c ./.jsdoc.json"
   },
   "dependencies": {
-    "serve": "^5.2.1",
-    "webpack": "^3.0.0"
+    "electron": "^4.0.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.5.1",
-    "docdash": "^0.4.0",
-    "eslint": "^3.18.0",
-    "jsdoc": "^3.4.3"
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.5",
+    "docdash": "^1.0.2",
+    "eslint": "^5.12.1",
+    "jsdoc": "^3.4.3",
+    "serve": "^10.1.1",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.2.1"
   }
 }
